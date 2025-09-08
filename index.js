@@ -5,13 +5,14 @@ const rl = readline.createInterface({
   output: process.stdout // Write to standard output (console)
 });
 
-
+console.log("Welcome.");
 loginMenu();
 
 function loginMenu() {
-    rl.question("0. Quit\n1. Login\n2. Register\nSelect an option [0-2]: ", (input) => {
+    rl.question("\n0. Quit\n1. Login\n2. Register\nSelect an option [0-2]: ", (input) => {
         switch(input) {
             case "0":
+                console.log("\nGoodbye!");
                 rl.close();
                 return;
             case "1":
@@ -21,14 +22,14 @@ function loginMenu() {
                 register();
                 break;
             default:
-                console.log("Unknown command.");
+                console.log("\nUnknown command.");
         }
         loginMenu();
     });
 }
 
 function userMenu() {
-    rl.question("0. Logout\n1. View Past Tickets\n2. Add Reimbursement Request\nSelect an option [0-2]: ", (input) => {
+    rl.question("\n0. Logout\n1. View Past Tickets\n2. Add Reimbursement Request\nSelect an option [0-2]: ", (input) => {
         switch(input) {
             case "0":
                 loginMenu();
@@ -40,14 +41,14 @@ function userMenu() {
                 userAddTickets();
                 break;
             default:
-                console.log("Unknown command.");
+                console.log("\nUnknown command.");
         }
         userMenu();
     });
 }
 
 function adminMenu() {
-    rl.question("0. Logout\n1. Filter by Status\n2. Approve/Deny Ticket\nSelect an option [0-2]: ", (input) => {
+    rl.question("\n0. Logout\n1. Filter by Status\n2. Approve/Deny Ticket\nSelect an option [0-2]: ", (input) => {
         switch(input) {
             case "0":
                 loginMenu();
@@ -59,13 +60,14 @@ function adminMenu() {
                 adminApproveTickets();
                 break;
             default:
-                console.log("Unknown command.");
+                console.log("\nUnknown command.");
         }
         adminMenu();
     });
 }
 
 function login() {
+    console.log();
     const account = {};
     rl.question("Enter Username: ", (input) => {
         account.username = input;
@@ -74,7 +76,8 @@ function login() {
 
             const result = controller.httpLogin(account);
             if(!result.isSuccess()) {
-                console.log("Invalid credentials.")
+                console.log("\nError");
+                result.errors.forEach((e) => console.log(e));
                 loginMenu();
                 return;
             }
@@ -88,66 +91,113 @@ function login() {
             adminMenu();
         })
     });
+    loginMenu();
 
 }
 
 
 function register() {
+    console.log();
     const account = {};
     rl.question("Enter Username: ", (input) => {
-        account.username = input;
-        rl.question("Enter Password: ", (input) => {
-            account.password = input;
-            rl.question("Admin? [y/n]: ", (input) => {
-                account.admin = input === "y";
+        if(!input) {
+            console.log("Empty usernames are not allowed.")
+            register();
+            return;   
+        }
 
-                const result = controller.httpRegister(account);
-                if(!result.isSuccess()) {
-                    console.log("Account creation failed.");
-                }
-                else {
-                    console.log("Account registered successfully!");
-                }
-                loginMenu();
-            })
+        account.username = input;
+        
+        rl.question("Enter Password: ", (input) => {
+            if(!input) {
+                console.log("Empty passwords are not allowed.")
+                register();
+                return;   
+            }
+
+            account.password = input;
+            account.admin = false;
+
+            const result = controller.httpRegister(account);
+            if(!result.isSuccess()) {
+                console.log("\nError");
+                result.errors.forEach((e) => console.log(e));
+            }
+            else {
+                console.log("\nAccount registered successfully!");
+            }
+            loginMenu();
         })
     });
+    loginMenu();
 }
 
 
 
 function userViewTickets() {
     const result = controller.httpViewUserTickets();
-    const listTickets = result.content;
+    if(!result.isSuccess()) {
+        console.log("\nError");
+        result.errors.forEach((e) => console.log(e));
+    }
+    else {
+        const listTickets = result.content;
 
-    listTickets.forEach((ticket, i) => console.log(`${i}: Amount - $${ticket.amount} Description - ${ticket.description} Status - ${ticket.status}`));
+        if(listTickets.length > 0) {
+            console.log("\nTickets");
+            listTickets.forEach((ticket) => console.log(`${ticket.id}: Amount - $${ticket.amount} Description - ${ticket.description} Status - ${ticket.status}`));
+        }
+        else {
+            console.log("\nNo tickets found!");
+        }
+    }
     userMenu();
 }
 
 function userAddTickets() {
-    const ticket = createTicket();
+    console.log();
+    let ticket = {};
+    rl.question("Enter Amount : $", (input) => {
+        if(Number.isNaN(Number(input))) {
+            console.log("Input must be a number.");
+            userAddTickets();
+            return;   
+        }
+        ticket.amount = Number(input).toFixed(2);
+        rl.question("Enter Description: ", (input) => {
+            if(!input) {
+                console.log("Empty descriptions are not allowed.");
+                userAddTickets();
+                return;   
+            }
+            ticket.description = input;
+            ticket.status = "Pending";
+            callbackAddTicket(ticket);
+        });
+    });
+    userMenu();
+}
+
+function callbackAddTicket(ticket) {
     if(!ticket) {
-        console.log("Invalid Fields");
+        console.log("\nInvalid Fields");
         userMenu();
         return;
     }
 
     const result = controller.httpAddUserTicket(ticket);
     if(!result.isSuccess()) {
-        console.log("Ticket creation failed");
+        console.log("\nError");
+        result.errors.forEach((e) => console.log(e));
     }
     else {
-        console.log("Ticket successfully added!");
+        console.log("\nTicket successfully added!");
     }
     userMenu();
 }
 
-function createTicket() {
-
-}
-
 function adminFilterTickets() {
-    rl.question("0. Pending\n1. Accepted\n2. Denied\nSelect a status [0-2]: ", (input) => {
+    rl.question("\n0. Pending\n1. Accepted\n2. Denied\nSelect a status [0-2]: ", (input) => {
         let status = "";
         switch(input) {
             case "0":
@@ -160,26 +210,66 @@ function adminFilterTickets() {
                 status = "Denied";
                 break;
             default:
-                console.log("Unknown status");
+                console.log("\nUnknown status");
                 adminMenu();
                 return;
         }
         const result = controller.httpFilterTickets(status);
-        const listTickets = result.isSuccess;
-        listTickets.forEach((ticket, i) => console.log(`${i}: Amount - $${ticket.amount} Description - ${ticket.description} Status - ${ticket.status}`));
+        if(!result.isSuccess()) {
+            console.log("\nError");
+            result.errors.forEach((e) => console.log(e));
+        }
+        else {
+            const listTickets = result.content;
+            if(listTickets.length > 0) {
+                console.log("\nTickets");
+                listTickets.forEach((ticket) => console.log(`${ticket.id}: User - ${ticket.username} Amount - $${ticket.amount} Description - ${ticket.description} Status - ${ticket.status}`));
+            }
+            else {
+                console.log("\nNo tickets found!");
+            }
+        }
         adminMenu();
     });
 }
 
 
 function adminApproveTickets() {
-    const ticket = selectTicket();
+    const result = controller.httpFilterTickets("Pending");
+    const listTickets = result.content;
+    if(listTickets.length > 0) {
+        console.log("\n0. Cancel");
+        console.log("Tickets");
+        listTickets.forEach((ticket) => console.log(`${ticket.id}: User - ${ticket.username} Amount - $${ticket.amount} Description - ${ticket.description} Status - ${ticket.status}`));
+        rl.question("Select a Ticket ID: ", (input) => {
+            if(input === "0") {
+                adminMenu();
+                return;
+            }
 
-    rl.question("0. Go Back\n1. Accepted\n2. Denied\nSelect a status [1-2]: ", (input) => {
+            const selectedId = parseInt(input);
+            const selectedTicket = listTickets.find((t) => selectedId === t.id);
+            if (!selectedTicket) {
+                console.log("\nTicket not found.");
+                adminMenu();
+            }
+            else {
+                adminApproveCallback(selectedTicket);
+            }
+        });
+    }
+    else {
+        console.log("No tickets found!");
+    }
+
+}
+
+function adminApproveCallback(ticket) {
+    rl.question("\n0. Cancel\n1. Accepted\n2. Denied\nSelect a status [1-2]: ", (input) => {
         let approve = null;
         switch(input) {
             case "0":
-                adminApproveTickets();
+                adminMenu();
                 return;
             case "1":
                 approve = true;
@@ -188,19 +278,15 @@ function adminApproveTickets() {
                 approve = false;
                 break;
             default:
-                console.log("Unknown status");
+                console.log("\nUnknown status");
                 adminApproveTickets();
                 return;
         }
         const result = controller.httpUpdateTicket(ticket, approve);
         if(!result.isSuccess()) {
-            console.log("Invalid status")
+            console.log("\nError");
+            result.errors.forEach((e) => console.log(e));
         }
         adminMenu();
     });
-
-}
-
-function selectTicket() {
-
 }

@@ -8,10 +8,11 @@ const controller = {
 };
 module.exports = controller;
 
-let dummyUsers = [];
+let dummyUsers = [{ username: "admin", password: "admin", admin: true }];
 let dummyTickets = [];
 
 let currentAccount = {};
+let id = 1;
 
 // DUMMY FUNCTION
 function httpLogin(account) {
@@ -43,7 +44,10 @@ function httpViewUserTickets() {
 
 //DUMMY FUNCTION
 function httpAddUserTicket(ticket) {
+    ticket.username = currentAccount.username;
+    ticket.id = id;
     dummyTickets.push(ticket);
+    id++;
     return {content: ticket, errors: [], isSuccess() { return this.errors.length === 0; }};
 }
 
