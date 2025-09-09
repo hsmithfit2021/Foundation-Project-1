@@ -116,7 +116,7 @@ function register() {
             }
 
             account.password = input;
-            account.admin = false;
+            //account.admin = false;
 
             const result = controller.httpRegister(account);
             if(!result.isSuccess()) {
