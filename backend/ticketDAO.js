@@ -6,6 +6,8 @@ const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "ticket";
 
+// THINK ABOUT PARTITION/SORT KEY AND ALSO LEARN TO SCAN
+
 // SELECT SINGLE TICKET function
 
 // GET TICKET BY STATUS function
