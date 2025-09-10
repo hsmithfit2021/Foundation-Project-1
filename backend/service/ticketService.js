@@ -17,6 +17,7 @@ async function getTicketsByUsername(username) {
 
 async function addTicket(username, ticket) {
     ticket.username = username;
+    ticket.ticket_id = crypto.randomUUID();
     const dbTicket = await ticketDAO.addTicket(ticket);
     if(!dbTicket) {
         return {content: null, error: "Adding Ticket Failed"};
