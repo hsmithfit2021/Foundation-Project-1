@@ -1,14 +1,45 @@
 const {DynamoDBClient} = require("@aws-sdk/client-dynamodb");
-const {DynamoDBDocumentClient, GetCommand, PutCommand, DeleteCommand} = require("@aws-sdk/lib-dynamodb");
+const {DynamoDBDocumentClient, ScanCommand, PutCommand} = require("@aws-sdk/lib-dynamodb");
 
 const client = new DynamoDBClient({region: "us-east-2"});
 const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "ticket";
 
-// THINK ABOUT PARTITION/SORT KEY AND ALSO LEARN TO SCAN
 
-// SELECT SINGLE TICKET function
+async function getTicketsByStatus(status) {
+    const command = new ScanCommand({
+        TableName,
+        FilterExpression: "#status = :status",
+        ExpressionAttributeNames: {"#status": "status"},
+        ExpressionAttributeValues: {":status" : status}
+    });
+    try {
+        const data = await documentClient.send(command);
+        return data.Items;
+    }
+    catch(error) {
+        console.error(error);
+        return null;
+    }
+}
+
+async function getTicketsByUsername(username) {
+    const command = new ScanCommand({
+        TableName,
+        FilterExpression: "#username = :username",
+        ExpressionAttributeNames: {"#username": "username"},
+        ExpressionAttributeValues: {":username" : username}
+    });
+    try {
+        const data = await documentClient.send(command);
+        return data.Items;
+    }
+    catch(error) {
+        console.error(error);
+        return null;
+    }
+}
 
 // GET TICKET BY STATUS function
 
@@ -42,23 +73,9 @@ async function updateTicket(ticket) {
     }
 }
 
-async function deleteTicket(id) {
-    const command = new DeleteCommand({
-        TableName,
-        Key: {id}
-    });
-    try {
-        await documentClient.send(command);
-        return true;
-    }
-    catch(error) {
-        console.error(error);
-        return null;
-    }
-}
-
 module.exports = {
     addTicket,
     updateTicket,
-    deleteTicket
+    getTicketsByStatus,
+    getTicketsByUsername
 }
