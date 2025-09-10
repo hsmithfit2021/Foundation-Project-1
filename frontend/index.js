@@ -75,7 +75,7 @@ function login() {
             account.password = input;
 
             const result = controller.httpLogin(account);
-            if(!result.isSuccess()) {
+            if(!result.content) {
                 console.log("\nError");
                 result.errors.forEach((e) => console.log(e));
                 loginMenu();
@@ -119,9 +119,9 @@ function register() {
             //account.admin = false;
 
             const result = controller.httpRegister(account);
-            if(!result.isSuccess()) {
+            if(!result.content) {
                 console.log("\nError");
-                result.errors.forEach((e) => console.log(e));
+                console.log(result.error);
             }
             else {
                 console.log("\nAccount registered successfully!");
@@ -136,9 +136,9 @@ function register() {
 
 function userViewTickets() {
     const result = controller.httpViewUserTickets();
-    if(!result.isSuccess()) {
+    if(!result.content) {
         console.log("\nError");
-        result.errors.forEach((e) => console.log(e));
+        console.log(result.error)
     }
     else {
         const listTickets = result.content;
@@ -186,9 +186,9 @@ function callbackAddTicket(ticket) {
     }
 
     const result = controller.httpAddUserTicket(ticket);
-    if(!result.isSuccess()) {
+    if(!result.content) {
         console.log("\nError");
-        result.errors.forEach((e) => console.log(e));
+        console.log(result.error);
     }
     else {
         console.log("\nTicket successfully added!");
@@ -215,9 +215,9 @@ function adminFilterTickets() {
                 return;
         }
         const result = controller.httpFilterTickets(status);
-        if(!result.isSuccess()) {
+        if(!result.content) {
             console.log("\nError");
-            result.errors.forEach((e) => console.log(e));
+            console.log(result.error);
         }
         else {
             const listTickets = result.content;
@@ -283,9 +283,9 @@ function adminApproveCallback(ticket) {
                 return;
         }
         const result = controller.httpUpdateTicket(ticket, approve);
-        if(!result.isSuccess()) {
+        if(!result.content) {
             console.log("\nError");
-            result.errors.forEach((e) => console.log(e));
+            console.log(result.error);
         }
         adminMenu();
     });

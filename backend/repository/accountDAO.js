@@ -1,19 +1,21 @@
 const {DynamoDBClient} = require("@aws-sdk/client-dynamodb");
-const {DynamoDBDocumentClient, GetCommand, PutCommand, DeleteCommand} = require("@aws-sdk/lib-dynamodb");
+const {DynamoDBDocumentClient, GetCommand, PutCommand, ScanCommand} = require("@aws-sdk/lib-dynamodb");
 
 const client = new DynamoDBClient({region: "us-east-2"});
 const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "account";
 
-async function getAccount(username) {
-    const command = new GetCommand({
+async function getAccountByUsername(username) {
+    const command = new ScanCommand({
         TableName,
-        Key: {username}
+        FilterExpression: "#username = :username",
+        ExpressionAttributeNames: {"#username": "username"},
+        ExpressionAttributeValues: {":username" : username}
     });
     try {
         const data = await documentClient.send(command);
-        return data.Item;
+        return data.Items[0];
     }
     catch(error) {
         console.error(error);
@@ -37,6 +39,6 @@ async function addAccount(user) {
 }
 
 module.exports = {
-    getAccount,
+    getAccountByUsername,
     addAccount
 }
