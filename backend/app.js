@@ -9,7 +9,7 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use("/account", accountController);
-app.use("/ticket", accountController);
+app.use("/ticket", ticketController);
 
 app.get("/", authenticateToken, (req, res) => {
     const user = res.locals.user;

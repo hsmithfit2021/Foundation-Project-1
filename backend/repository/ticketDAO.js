@@ -1,11 +1,25 @@
 const {DynamoDBClient} = require("@aws-sdk/client-dynamodb");
-const {DynamoDBDocumentClient, ScanCommand, PutCommand} = require("@aws-sdk/lib-dynamodb");
+const {DynamoDBDocumentClient, ScanCommand, PutCommand, GetCommand} = require("@aws-sdk/lib-dynamodb");
 
 const client = new DynamoDBClient({region: "us-east-2"});
 const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "ticket";
 
+async function getTicketById(ticket_id) {
+    const command = new GetCommand({
+        TableName,
+        Key: {ticket_id}
+    });
+    try {
+        const data = await documentClient.send(command);
+        return data.Item;
+    }
+    catch(error) {
+        console.error(error);
+        return null;
+    }
+}
 
 async function getTicketsByStatus(status) {
     const command = new ScanCommand({
@@ -77,5 +91,6 @@ module.exports = {
     addTicket,
     updateTicket,
     getTicketsByStatus,
-    getTicketsByUsername
+    getTicketsByUsername,
+    getTicketById
 }
