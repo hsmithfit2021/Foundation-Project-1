@@ -4,6 +4,8 @@ const {DynamoDBDocumentClient, ScanCommand, PutCommand, GetCommand} = require("@
 const client = new DynamoDBClient({region: "us-east-2"});
 const documentClient = DynamoDBDocumentClient.from(client);
 
+const {logger} = require("../util/logger.js");
+
 const TableName = "ticket";
 
 async function getTicketById(ticket_id) {
@@ -16,7 +18,7 @@ async function getTicketById(ticket_id) {
         return data.Item;
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }
@@ -33,7 +35,7 @@ async function getTicketsByStatus(status) {
         return data.Items;
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }
@@ -50,12 +52,10 @@ async function getTicketsByUsername(username) {
         return data.Items;
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }
-
-// GET TICKET BY STATUS function
 
 async function addTicket(ticket) {
     const command = new PutCommand({
@@ -67,7 +67,7 @@ async function addTicket(ticket) {
         return ticket;
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }
@@ -82,7 +82,7 @@ async function updateTicket(ticket) {
         return ticket;
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }

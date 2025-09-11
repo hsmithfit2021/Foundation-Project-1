@@ -6,6 +6,8 @@ const documentClient = DynamoDBDocumentClient.from(client);
 
 const TableName = "account";
 
+const {logger} = require("../util/logger.js");
+
 async function getAccountByUsername(username) {
     const command = new ScanCommand({
         TableName,
@@ -18,7 +20,7 @@ async function getAccountByUsername(username) {
         return data.Items[0];
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }
@@ -33,7 +35,7 @@ async function addAccount(user) {
         return user;
     }
     catch(error) {
-        console.error(error);
+        logger.error(error);
         return null;
     }
 }

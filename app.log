@@ -1,0 +1,70 @@
+2025-09-11T17:22:54.713Z [info]: Incoming POST : /account/login
+2025-09-11T17:22:54.716Z [info]: Logging in
+2025-09-11T17:22:55.020Z [info]: Successfully logged in
+2025-09-11T17:25:00.165Z [info]: Incoming POST : /ticket
+2025-09-11T17:25:00.166Z [info]: Authenticating Token
+2025-09-11T17:25:00.169Z [info]: Login Successfully Authenticated
+2025-09-11T17:25:00.170Z [info]: Adding ticket
+2025-09-11T17:25:00.309Z [info]: Successfully added ticket
+2025-09-11T17:25:13.387Z [info]: Incoming PUT : /ticket/b01b7639-31de-4b21-91de-4fe23d93f08c
+2025-09-11T17:25:13.388Z [info]: Authenticating Token
+2025-09-11T17:25:13.390Z [error]: jwt expired
+2025-09-11T17:25:13.391Z [warn]: Invalid Token
+2025-09-11T17:25:28.120Z [info]: Incoming PUT : /ticket/b01b7639-31de-4b21-91de-4fe23d93f08c
+2025-09-11T17:25:28.121Z [info]: Authenticating Token
+2025-09-11T17:25:28.123Z [info]: Login Successfully Authenticated
+2025-09-11T17:27:35.482Z [info]: Incoming POST : /account/login
+2025-09-11T17:27:35.483Z [info]: Logging in
+2025-09-11T17:27:35.619Z [warn]: Failed to find Account
+2025-09-11T17:28:36.482Z [info]: Incoming POST : /account/login
+2025-09-11T17:28:36.486Z [info]: Logging in
+2025-09-11T17:28:36.740Z [warn]: Failed to find Account
+2025-09-11T17:44:51.552Z [info]: Incoming POST : /account/login
+2025-09-11T17:44:51.557Z [info]: Logging in
+2025-09-11T17:44:51.795Z [info]: Account: "admin" found successfully
+2025-09-11T17:44:51.884Z [info]: Successfully logged in
+2025-09-11T17:45:43.085Z [info]: Incoming GET : /ticket?status=Pending
+2025-09-11T17:45:43.086Z [info]: Authenticating Token
+2025-09-11T17:45:43.091Z [info]: Login Successfully Authenticated
+2025-09-11T17:45:43.092Z [info]: Getting Tickets by status
+2025-09-11T17:45:43.224Z [info]: 1 tickets found"
+2025-09-11T17:45:43.225Z [info]: Returning Tickets
+2025-09-11T17:46:49.484Z [info]: Incoming PUT : /ticket/15852011-d900-4939-9810-242350893829
+2025-09-11T17:46:49.485Z [info]: Authenticating Token
+2025-09-11T17:46:49.487Z [info]: Login Successfully Authenticated
+2025-09-11T17:46:49.487Z [info]: Getting Tickets by id
+2025-09-11T17:46:49.522Z [info]: Ticket: "15852011-d900-4939-9810-242350893829" found
+2025-09-11T17:46:49.523Z [info]: Returning Ticket
+2025-09-11T17:46:49.523Z [info]: Updating ticket
+2025-09-11T17:46:49.564Z [info]: Ticket: "15852011-d900-4939-9810-242350893829" by User: "username" found
+2025-09-11T17:46:49.565Z [info]: Successfully updated ticket
+2025-09-11T17:47:18.445Z [info]: Incoming GET : /ticket?status=Accepted
+2025-09-11T17:47:18.446Z [info]: Authenticating Token
+2025-09-11T17:47:18.448Z [info]: Login Successfully Authenticated
+2025-09-11T17:47:18.448Z [info]: Getting Tickets by status
+2025-09-11T17:47:18.479Z [info]: 2 tickets found"
+2025-09-11T17:47:18.480Z [info]: Returning Tickets
+2025-09-11T17:53:17.009Z [info]: Incoming PUT : /ticket/15852011-d900-4939-9810-242350893828
+2025-09-11T17:53:17.010Z [info]: Authenticating Token
+2025-09-11T17:53:17.011Z [info]: Login Successfully Authenticated
+2025-09-11T17:53:17.011Z [info]: Getting Tickets by id
+2025-09-11T17:53:17.129Z [info]: Ticket: "15852011-d900-4939-9810-242350893828" found
+2025-09-11T17:53:17.129Z [warn]: Failed to fetch Ticket
+2025-09-11T17:53:20.807Z [info]: Incoming PUT : /ticket/15852011-d900-4939-9810-242350893829
+2025-09-11T17:53:20.807Z [info]: Authenticating Token
+2025-09-11T17:53:20.808Z [info]: Login Successfully Authenticated
+2025-09-11T17:53:20.809Z [info]: Getting Tickets by id
+2025-09-11T17:53:20.841Z [info]: Ticket: "15852011-d900-4939-9810-242350893829" found
+2025-09-11T17:53:20.842Z [info]: Returning Ticket
+2025-09-11T17:53:28.493Z [info]: Incoming PUT : /ticket/15852011-d900-4939-9810-242350893828
+2025-09-11T17:53:28.493Z [info]: Authenticating Token
+2025-09-11T17:53:28.495Z [info]: Login Successfully Authenticated
+2025-09-11T17:53:28.495Z [info]: Getting Tickets by id
+2025-09-11T17:53:28.525Z [info]: Ticket: "15852011-d900-4939-9810-242350893828" found
+2025-09-11T17:53:28.526Z [warn]: Failed to fetch Ticket
+2025-09-11T17:53:32.891Z [info]: Incoming PUT : /ticket/15852011-d900-4939-9810-242350893829
+2025-09-11T17:53:32.891Z [info]: Authenticating Token
+2025-09-11T17:53:32.893Z [info]: Login Successfully Authenticated
+2025-09-11T17:53:32.893Z [info]: Getting Tickets by id
+2025-09-11T17:53:32.925Z [info]: Ticket: "15852011-d900-4939-9810-242350893829" found
+2025-09-11T17:53:32.925Z [info]: Returning Ticket

@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { loggerMiddleware } = require("./util/logger.js")
 const app = express();
 const accountController = require('./controller/accountController');
 const ticketController = require('./controller/ticketController');
@@ -8,6 +8,7 @@ const { authenticateToken } = require("./util/jwt");
 const PORT = 3000;
 
 app.use(express.json());
+app.use(loggerMiddleware)
 app.use("/account", accountController);
 app.use("/ticket", ticketController);
 

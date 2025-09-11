@@ -44,8 +44,9 @@ router.put("/:ticket_id", authenticateToken, async(req, res) => {
         return;
     }
     
-    const result = await ticketService.getTicketById(ticket_id);
-    const dbTicket = result.content;
+    const getCheck = await ticketService.getTicketById(ticket_id);
+    const dbTicket = getCheck.content;
+
     if(!dbTicket) {
         res.status(404).json({content: null, error: "Ticket not found."});
         return;

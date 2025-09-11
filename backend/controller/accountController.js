@@ -24,7 +24,7 @@ router.post("/login", async (req, res) => {
             },
             secretKey,
             {
-                expiresIn: "15m"
+                expiresIn: "30m"
             }
         );
         data.token = token;
