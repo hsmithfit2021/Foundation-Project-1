@@ -52,7 +52,7 @@ router.put("/:ticket_id", authenticateToken, async(req, res) => {
         return;
     }
 
-    if(dbTicket.status !== "Pending") {
+    if(!(dbTicket.status === "Pending" || dbTicket.status === ticket.status)) {
         res.status(400).json({content: null, error: "Can only update Tickets with status: \"Pending\"."});
         return;
     }

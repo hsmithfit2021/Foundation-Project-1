@@ -68,3 +68,330 @@
 2025-09-11T17:53:32.893Z [info]: Getting Tickets by id
 2025-09-11T17:53:32.925Z [info]: Ticket: "15852011-d900-4939-9810-242350893829" found
 2025-09-11T17:53:32.925Z [info]: Returning Ticket
+2025-09-12T18:03:51.214Z [info]: Logging in
+2025-09-12T18:03:51.218Z [info]: Account: "username" found successfully
+2025-09-12T18:03:51.226Z [warn]: Invalid password
+2025-09-12T18:03:51.239Z [info]: Logging in
+2025-09-12T18:03:51.240Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:03:51.244Z [info]: Logging in
+2025-09-12T18:03:51.245Z [info]: Account: "username" found successfully
+2025-09-12T18:03:51.252Z [warn]: Invalid password
+2025-09-12T18:03:51.255Z [info]: Logging in
+2025-09-12T18:03:51.256Z [info]: Account: "username" found successfully
+2025-09-12T18:03:51.258Z [warn]: Invalid password
+2025-09-12T18:04:47.498Z [info]: Logging in
+2025-09-12T18:04:47.502Z [info]: Account: "username" found successfully
+2025-09-12T18:04:47.506Z [warn]: Invalid password
+2025-09-12T18:04:47.523Z [info]: Logging in
+2025-09-12T18:04:47.523Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:04:47.527Z [info]: Logging in
+2025-09-12T18:04:47.527Z [info]: Account: "username" found successfully
+2025-09-12T18:04:47.535Z [warn]: Invalid password
+2025-09-12T18:04:47.538Z [info]: Logging in
+2025-09-12T18:04:47.539Z [info]: Account: "username" found successfully
+2025-09-12T18:04:47.540Z [warn]: Invalid password
+2025-09-12T18:10:24.173Z [info]: Logging in
+2025-09-12T18:10:24.177Z [info]: Account: "username" found successfully
+2025-09-12T18:10:24.189Z [warn]: Invalid password
+2025-09-12T18:10:24.231Z [info]: Logging in
+2025-09-12T18:10:24.232Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:10:24.236Z [info]: Logging in
+2025-09-12T18:10:24.237Z [info]: Account: "username" found successfully
+2025-09-12T18:10:24.245Z [warn]: Invalid password
+2025-09-12T18:10:24.249Z [info]: Logging in
+2025-09-12T18:10:24.250Z [info]: Account: "username" found successfully
+2025-09-12T18:10:24.251Z [warn]: Invalid password
+2025-09-12T18:10:24.254Z [info]: Adding ticket
+2025-09-12T18:10:24.264Z [info]: Updating ticket
+2025-09-12T18:10:24.265Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:10:24.268Z [info]: Updating ticket
+2025-09-12T18:10:24.268Z [warn]: Invalid status
+2025-09-12T18:10:24.271Z [info]: Getting Tickets by username
+2025-09-12T18:10:24.271Z [info]: 1 tickets found"
+2025-09-12T18:10:24.274Z [info]: Getting Tickets by status
+2025-09-12T18:10:24.274Z [info]: 1 tickets found"
+2025-09-12T18:14:24.228Z [info]: Logging in
+2025-09-12T18:14:24.353Z [info]: Account: "username" found successfully
+2025-09-12T18:14:24.453Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:14:24.501Z [info]: Logging in
+2025-09-12T18:14:24.502Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:14:24.506Z [info]: Logging in
+2025-09-12T18:14:24.615Z [info]: Account: "username" found successfully
+2025-09-12T18:14:24.712Z [warn]: Invalid password
+2025-09-12T18:14:24.715Z [info]: Logging in
+2025-09-12T18:14:24.810Z [info]: Account: "username" found successfully
+2025-09-12T18:14:24.903Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:14:24.907Z [info]: Adding ticket
+2025-09-12T18:14:24.914Z [info]: Updating ticket
+2025-09-12T18:14:24.915Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:14:24.919Z [info]: Updating ticket
+2025-09-12T18:14:24.919Z [warn]: Invalid status
+2025-09-12T18:14:24.922Z [info]: Getting Tickets by username
+2025-09-12T18:14:24.923Z [info]: 1 tickets found"
+2025-09-12T18:14:24.927Z [info]: Getting Tickets by status
+2025-09-12T18:14:24.927Z [info]: 1 tickets found"
+2025-09-12T18:18:18.373Z [info]: Logging in
+2025-09-12T18:18:18.487Z [info]: Account: "username" found successfully
+2025-09-12T18:18:18.584Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:18:18.641Z [info]: Logging in
+2025-09-12T18:18:18.642Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:18:18.646Z [info]: Logging in
+2025-09-12T18:18:18.748Z [info]: Account: "username" found successfully
+2025-09-12T18:18:18.846Z [warn]: Invalid password
+2025-09-12T18:18:18.849Z [info]: Logging in
+2025-09-12T18:18:18.945Z [info]: Account: "username" found successfully
+2025-09-12T18:18:19.043Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:18:19.046Z [info]: Adding ticket
+2025-09-12T18:18:19.055Z [info]: Updating ticket
+2025-09-12T18:18:19.056Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:18:19.062Z [info]: Updating ticket
+2025-09-12T18:18:19.062Z [warn]: Invalid status
+2025-09-12T18:18:19.066Z [info]: Getting Tickets by username
+2025-09-12T18:18:19.066Z [info]: 1 tickets found"
+2025-09-12T18:18:19.069Z [info]: Getting Tickets by status
+2025-09-12T18:18:19.069Z [info]: 1 tickets found"
+2025-09-12T18:18:49.310Z [info]: Logging in
+2025-09-12T18:18:49.460Z [info]: Account: "username" found successfully
+2025-09-12T18:18:49.574Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:18:49.602Z [info]: Logging in
+2025-09-12T18:18:49.603Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:18:49.605Z [info]: Logging in
+2025-09-12T18:18:49.714Z [info]: Account: "username" found successfully
+2025-09-12T18:18:49.815Z [warn]: Invalid password
+2025-09-12T18:18:49.818Z [info]: Logging in
+2025-09-12T18:18:49.915Z [info]: Account: "username" found successfully
+2025-09-12T18:18:50.015Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:18:50.034Z [info]: Adding ticket
+2025-09-12T18:18:50.042Z [info]: Updating ticket
+2025-09-12T18:18:50.043Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:18:50.046Z [info]: Updating ticket
+2025-09-12T18:18:50.047Z [warn]: Invalid status
+2025-09-12T18:18:50.050Z [info]: Getting Tickets by username
+2025-09-12T18:18:50.051Z [info]: 1 tickets found"
+2025-09-12T18:18:50.054Z [info]: Getting Tickets by status
+2025-09-12T18:18:50.054Z [info]: 1 tickets found"
+2025-09-12T18:19:55.798Z [info]: Logging in
+2025-09-12T18:19:55.969Z [info]: Account: "username" found successfully
+2025-09-12T18:19:56.138Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:19:56.190Z [info]: Logging in
+2025-09-12T18:19:56.191Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:19:56.197Z [info]: Logging in
+2025-09-12T18:19:56.469Z [info]: Account: "username" found successfully
+2025-09-12T18:19:56.613Z [warn]: Invalid password
+2025-09-12T18:19:56.616Z [info]: Logging in
+2025-09-12T18:19:56.749Z [info]: Account: "username" found successfully
+2025-09-12T18:19:56.875Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:19:56.894Z [info]: Adding ticket
+2025-09-12T18:19:56.896Z [info]: Ticket: "498233d6-4724-40b9-91f9-a4d8fb01e09b" by User: "username" added
+2025-09-12T18:19:56.900Z [info]: Updating ticket
+2025-09-12T18:19:56.901Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:19:56.904Z [info]: Updating ticket
+2025-09-12T18:19:56.905Z [warn]: Invalid status
+2025-09-12T18:19:56.907Z [info]: Getting Tickets by username
+2025-09-12T18:19:56.908Z [info]: 1 tickets found"
+2025-09-12T18:19:56.912Z [info]: Getting Tickets by status
+2025-09-12T18:19:56.913Z [info]: 1 tickets found"
+2025-09-12T18:21:21.636Z [info]: Logging in
+2025-09-12T18:21:21.749Z [info]: Account: "username" found successfully
+2025-09-12T18:21:21.850Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:21:21.884Z [info]: Logging in
+2025-09-12T18:21:21.885Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:21:21.888Z [info]: Logging in
+2025-09-12T18:21:21.990Z [info]: Account: "username" found successfully
+2025-09-12T18:21:22.090Z [warn]: Invalid password
+2025-09-12T18:21:22.093Z [info]: Logging in
+2025-09-12T18:21:22.194Z [info]: Account: "username" found successfully
+2025-09-12T18:21:22.294Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:21:22.307Z [info]: Adding ticket
+2025-09-12T18:21:22.309Z [info]: Ticket: "d516a090-740d-4ec2-b056-503430bf502f" by User: "username" added
+2025-09-12T18:21:22.312Z [info]: Updating ticket
+2025-09-12T18:21:22.313Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:21:22.316Z [info]: Updating ticket
+2025-09-12T18:21:22.317Z [warn]: Invalid status
+2025-09-12T18:21:22.319Z [info]: Getting Tickets by username
+2025-09-12T18:21:22.320Z [info]: 1 tickets found"
+2025-09-12T18:21:22.322Z [info]: Getting Tickets by status
+2025-09-12T18:21:22.323Z [info]: 1 tickets found"
+2025-09-12T18:21:57.740Z [info]: Logging in
+2025-09-12T18:21:57.855Z [info]: Account: "username" found successfully
+2025-09-12T18:21:57.957Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:21:57.993Z [info]: Logging in
+2025-09-12T18:21:57.994Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:21:57.998Z [info]: Logging in
+2025-09-12T18:21:58.100Z [info]: Account: "username" found successfully
+2025-09-12T18:21:58.200Z [warn]: Invalid password
+2025-09-12T18:21:58.203Z [info]: Logging in
+2025-09-12T18:21:58.300Z [info]: Account: "username" found successfully
+2025-09-12T18:21:58.394Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:21:58.409Z [info]: Adding ticket
+2025-09-12T18:21:58.410Z [info]: Ticket: "7533326b-9dee-4d46-b96a-22407ff019f4" by User: "username" added
+2025-09-12T18:21:58.413Z [info]: Updating ticket
+2025-09-12T18:21:58.414Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:21:58.417Z [info]: Updating ticket
+2025-09-12T18:21:58.418Z [warn]: Invalid status
+2025-09-12T18:21:58.420Z [info]: Getting Tickets by username
+2025-09-12T18:21:58.421Z [info]: 1 tickets found"
+2025-09-12T18:21:58.424Z [info]: Getting Tickets by status
+2025-09-12T18:21:58.424Z [info]: 1 tickets found"
+2025-09-12T18:26:28.852Z [info]: Logging in
+2025-09-12T18:26:28.971Z [info]: Account: "username" found successfully
+2025-09-12T18:26:29.079Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:26:29.125Z [info]: Logging in
+2025-09-12T18:26:29.126Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:26:29.130Z [info]: Logging in
+2025-09-12T18:26:29.243Z [info]: Account: "username" found successfully
+2025-09-12T18:26:29.351Z [warn]: Invalid password
+2025-09-12T18:26:29.354Z [info]: Logging in
+2025-09-12T18:26:29.639Z [info]: Account: "username" found successfully
+2025-09-12T18:26:29.784Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:26:29.808Z [info]: Adding ticket
+2025-09-12T18:26:29.809Z [info]: Ticket: "4ce18659-91ed-4941-94bb-1ec10d106797" by User: "username" added
+2025-09-12T18:26:29.814Z [info]: Updating ticket
+2025-09-12T18:26:29.815Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:26:29.819Z [info]: Updating ticket
+2025-09-12T18:26:29.819Z [warn]: Invalid status
+2025-09-12T18:26:29.822Z [info]: Getting Tickets by username
+2025-09-12T18:26:29.822Z [info]: 1 tickets found"
+2025-09-12T18:26:29.826Z [info]: Getting Tickets by status
+2025-09-12T18:26:29.826Z [info]: 1 tickets found"
+2025-09-12T18:27:30.239Z [info]: Logging in
+2025-09-12T18:27:30.564Z [info]: Account: "username" found successfully
+2025-09-12T18:27:30.690Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:27:30.734Z [info]: Logging in
+2025-09-12T18:27:30.734Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:27:30.737Z [info]: Logging in
+2025-09-12T18:27:30.859Z [info]: Account: "username" found successfully
+2025-09-12T18:27:30.977Z [warn]: Invalid password
+2025-09-12T18:27:30.980Z [info]: Logging in
+2025-09-12T18:27:31.106Z [info]: Account: "username" found successfully
+2025-09-12T18:27:31.241Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:27:31.259Z [info]: Adding ticket
+2025-09-12T18:27:31.260Z [info]: Ticket: "bea4da02-45dc-4de6-85bc-68547f606396" by User: "username" added
+2025-09-12T18:27:31.265Z [info]: Updating ticket
+2025-09-12T18:27:31.265Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:27:31.269Z [info]: Updating ticket
+2025-09-12T18:27:31.270Z [warn]: Invalid status
+2025-09-12T18:27:31.273Z [info]: Getting Tickets by username
+2025-09-12T18:27:31.274Z [info]: 1 tickets found"
+2025-09-12T18:27:31.277Z [info]: Getting Tickets by status
+2025-09-12T18:27:31.278Z [info]: 1 tickets found"
+2025-09-12T18:30:07.685Z [info]: Logging in
+2025-09-12T18:30:07.835Z [info]: Account: "username" found successfully
+2025-09-12T18:30:07.953Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:30:07.959Z [info]: Logging in
+2025-09-12T18:30:07.961Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:30:07.964Z [info]: Logging in
+2025-09-12T18:30:08.079Z [info]: Account: "username" found successfully
+2025-09-12T18:30:08.194Z [warn]: Invalid password
+2025-09-12T18:30:08.197Z [info]: Registering Account
+2025-09-12T18:30:08.330Z [info]: Successfully registered Account: "username"
+2025-09-12T18:30:08.333Z [info]: Adding ticket
+2025-09-12T18:30:08.334Z [info]: Ticket: "50a35eb6-cbb9-4dca-a60e-55ecb983f2a8" by User: "username" added
+2025-09-12T18:30:08.337Z [info]: Updating ticket
+2025-09-12T18:30:08.338Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:30:08.357Z [info]: Updating ticket
+2025-09-12T18:30:08.357Z [warn]: Invalid status
+2025-09-12T18:30:08.361Z [info]: Getting Tickets by username
+2025-09-12T18:30:08.362Z [info]: 1 tickets found"
+2025-09-12T18:30:08.366Z [info]: Getting Tickets by status
+2025-09-12T18:30:08.367Z [info]: 1 tickets found"
+2025-09-12T18:31:33.351Z [info]: Logging in
+2025-09-12T18:31:33.468Z [info]: Account: "username" found successfully
+2025-09-12T18:31:33.563Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:31:33.568Z [info]: Logging in
+2025-09-12T18:31:33.569Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:31:33.572Z [info]: Logging in
+2025-09-12T18:31:33.676Z [info]: Account: "username" found successfully
+2025-09-12T18:31:33.770Z [warn]: Invalid password
+2025-09-12T18:31:33.773Z [info]: Registering Account
+2025-09-12T18:31:33.866Z [info]: Successfully registered Account: "username"
+2025-09-12T18:31:33.869Z [info]: Adding ticket
+2025-09-12T18:31:33.870Z [info]: Ticket: "f2004931-4c5e-4a8e-8a28-a4df33b770f0" by User: "username" added
+2025-09-12T18:31:33.873Z [info]: Updating ticket
+2025-09-12T18:31:33.874Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:31:33.913Z [info]: Updating ticket
+2025-09-12T18:31:33.914Z [warn]: Invalid status
+2025-09-12T18:31:33.917Z [info]: Getting Tickets by username
+2025-09-12T18:31:33.918Z [info]: 1 tickets found"
+2025-09-12T18:31:33.920Z [info]: Getting Tickets by status
+2025-09-12T18:31:33.921Z [info]: 1 tickets found"
+2025-09-12T18:32:23.045Z [info]: Logging in
+2025-09-12T18:32:23.170Z [info]: Account: "username" found successfully
+2025-09-12T18:32:23.270Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:32:23.275Z [info]: Logging in
+2025-09-12T18:32:23.276Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:32:23.279Z [info]: Logging in
+2025-09-12T18:32:23.377Z [info]: Account: "username" found successfully
+2025-09-12T18:32:23.472Z [warn]: Invalid password
+2025-09-12T18:32:23.475Z [info]: Registering Account
+2025-09-12T18:32:23.577Z [info]: Successfully registered Account: "username"
+2025-09-12T18:32:23.581Z [info]: Adding ticket
+2025-09-12T18:32:23.581Z [info]: Ticket: "ac9bda4b-309e-4468-ae16-b3fa49a1eae8" by User: "username" added
+2025-09-12T18:32:23.585Z [info]: Updating ticket
+2025-09-12T18:32:23.585Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:32:23.600Z [info]: Updating ticket
+2025-09-12T18:32:23.601Z [warn]: Invalid status
+2025-09-12T18:32:23.603Z [info]: Getting Tickets by username
+2025-09-12T18:32:23.604Z [info]: 1 tickets found"
+2025-09-12T18:32:23.607Z [info]: Getting Tickets by status
+2025-09-12T18:32:23.608Z [info]: 1 tickets found"
+2025-09-12T18:33:27.046Z [info]: Logging in
+2025-09-12T18:33:27.296Z [info]: Account: "username" found successfully
+2025-09-12T18:33:27.476Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:33:27.483Z [info]: Logging in
+2025-09-12T18:33:27.484Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:33:27.488Z [info]: Logging in
+2025-09-12T18:33:27.627Z [info]: Account: "username" found successfully
+2025-09-12T18:33:27.748Z [warn]: Invalid password
+2025-09-12T18:33:27.751Z [info]: Registering Account
+2025-09-12T18:33:27.865Z [info]: Successfully registered Account: "username"
+2025-09-12T18:33:27.868Z [info]: Adding ticket
+2025-09-12T18:33:27.868Z [info]: Ticket: "d5e550f2-3216-415c-8704-e5ce462c6299" by User: "username" added
+2025-09-12T18:33:27.904Z [info]: Updating ticket
+2025-09-12T18:33:27.904Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:33:27.923Z [info]: Updating ticket
+2025-09-12T18:33:27.924Z [warn]: Invalid status
+2025-09-12T18:33:27.927Z [info]: Getting Tickets by username
+2025-09-12T18:33:27.928Z [info]: 1 tickets found"
+2025-09-12T18:33:27.931Z [info]: Getting Tickets by status
+2025-09-12T18:33:27.932Z [info]: 1 tickets found"
+2025-09-12T18:34:47.869Z [info]: Logging in
+2025-09-12T18:34:48.006Z [info]: Account: "username" found successfully
+2025-09-12T18:34:48.113Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:34:48.118Z [info]: Logging in
+2025-09-12T18:34:48.119Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:34:48.122Z [info]: Logging in
+2025-09-12T18:34:48.228Z [info]: Account: "username" found successfully
+2025-09-12T18:34:48.327Z [warn]: Invalid password
+2025-09-12T18:34:48.330Z [info]: Registering Account
+2025-09-12T18:34:48.430Z [info]: Successfully registered Account: "username"
+2025-09-12T18:34:48.432Z [info]: Adding ticket
+2025-09-12T18:34:48.433Z [info]: Ticket: "2543c419-8bd2-43e3-b28d-1d744ea52cad" by User: "username" added
+2025-09-12T18:34:48.435Z [info]: Updating ticket
+2025-09-12T18:34:48.436Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:34:48.453Z [info]: Updating ticket
+2025-09-12T18:34:48.454Z [warn]: Invalid status
+2025-09-12T18:34:48.457Z [info]: Getting Tickets by username
+2025-09-12T18:34:48.458Z [info]: 1 tickets found"
+2025-09-12T18:34:48.461Z [info]: Getting Tickets by status
+2025-09-12T18:34:48.461Z [info]: 1 tickets found"
+2025-09-12T18:35:28.314Z [info]: Logging in
+2025-09-12T18:35:28.574Z [info]: Account: "username" found successfully
+2025-09-12T18:35:28.728Z [info]: Successfully logged in to Account: "username"
+2025-09-12T18:35:28.736Z [info]: Logging in
+2025-09-12T18:35:28.736Z [warn]: Failed to find Account: "invalid"
+2025-09-12T18:35:28.740Z [info]: Logging in
+2025-09-12T18:35:28.878Z [info]: Account: "username" found successfully
+2025-09-12T18:35:28.996Z [warn]: Invalid password
+2025-09-12T18:35:29.000Z [info]: Registering Account
+2025-09-12T18:35:29.116Z [info]: Successfully registered Account: "username"
+2025-09-12T18:35:29.118Z [info]: Adding ticket
+2025-09-12T18:35:29.119Z [info]: Ticket: "078ffe5e-1d1d-4ab8-b315-10558167ccc0" by User: "username" added
+2025-09-12T18:35:29.122Z [info]: Updating ticket
+2025-09-12T18:35:29.123Z [info]: Ticket: "1" by User: "username" updated
+2025-09-12T18:35:29.126Z [info]: Updating ticket
+2025-09-12T18:35:29.128Z [warn]: Invalid status
+2025-09-12T18:35:29.132Z [info]: Getting Tickets by username
+2025-09-12T18:35:29.132Z [info]: 1 tickets found"
+2025-09-12T18:35:29.137Z [info]: Getting Tickets by status
+2025-09-12T18:35:29.138Z [info]: 1 tickets found"

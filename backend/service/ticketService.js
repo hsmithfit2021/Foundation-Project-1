@@ -53,12 +53,12 @@ async function updateTicket(ticket) {
         return {content: null, error: "Ticket can only be set to Accepted or Denied."};
     }
 
-    const dbTicket = await ticketDAO.addTicket(ticket);
+    const dbTicket = await ticketDAO.updateTicket(ticket);
     if(!dbTicket) {
         logger.warn("Failed to update Ticket");
         return {content: null, error: "Updating Ticket Failed"};
     }
-        logger.info(`Ticket: "${ticket.ticket_id}" by User: "${ticket.username}" updated`);
+    logger.info(`Ticket: "${dbTicket.ticket_id}" by User: "${dbTicket.username}" updated`);
     return {content: dbTicket};
 }
 
