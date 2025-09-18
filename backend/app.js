@@ -1,5 +1,5 @@
 const express = require('express');
-const { loggerMiddleware } = require("./util/logger.js")
+const { logger, loggerMiddleware } = require("./util/logger.js")
 const app = express();
 const accountController = require('./controller/accountController');
 const ticketController = require('./controller/ticketController');
@@ -18,5 +18,5 @@ app.get("/", authenticateToken, (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log("Listening 3000");
+    logger.info(`Listening on port ${PORT}`);
 })

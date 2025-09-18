@@ -93,7 +93,7 @@ async function validateTicket(req, res, next) {
         res.status(400).json({content: null, error: "Description can not be blank."});
         return;
     }
-    if(Number.isNaN(Number(ticket.amount))) {
+    if(typeof ticket.amount !== "number") {
         res.status(400).json({content: null, error: "Amount must be a number."});
         return;
     }
