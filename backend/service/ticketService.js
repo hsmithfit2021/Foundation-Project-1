@@ -34,10 +34,15 @@ async function getTicketsByUsername(username) {
 
 async function addTicket(username, ticket) {
     logger.info("Adding ticket");
-    ticket.username = username;
-    ticket.ticket_id = crypto.randomUUID();
-    ticket.status = "Pending";
-    const dbTicket = await ticketDAO.addTicket(ticket);
+
+    const newTicket = {};
+    newTicket.description = ticket.description;
+    newTicket.amount = ticket.amount;
+    newTicket.username = username;
+    newTicket.ticket_id = crypto.randomUUID();
+    newTicket.status = "Pending";
+
+    const dbTicket = await ticketDAO.addTicket(newTicket);
     if(!dbTicket) {
         logger.warn("Failed to add Ticket");
         return {content: null, error: "Adding Ticket Failed"};

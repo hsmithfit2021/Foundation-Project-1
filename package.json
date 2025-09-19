@@ -4,7 +4,7 @@
   "description": "Foundation Project 1",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "Hunter Smith",
   "license": "ISC",

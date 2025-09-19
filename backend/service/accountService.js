@@ -28,7 +28,7 @@ async function register(user) {
 
     const dbAccount = await accountDAO.addAccount(user);
     if(!dbAccount) {
-        logger.warn(`Failed to register Account "${dbAccount.username}"`);
+        logger.warn(`Failed to register Account "${user.username}"`);
         return {content: null, error: "Registration Failed"};
     }
     logger.info(`Successfully registered Account: "${dbAccount.username}"`);
