@@ -647,3 +647,116 @@
 2025-09-18T20:20:30.876Z [info]: Authenticating Token
 2025-09-18T20:20:30.878Z [info]: Login Successfully Authenticated
 2025-09-19T12:56:04.712Z [info]: Listening on port 3000
+2025-09-19T13:41:42.153Z [info]: Listening on port 3000
+2025-09-19T13:41:46.817Z [info]: Incoming POST : /account/login
+2025-09-19T13:41:46.818Z [info]: Logging in
+2025-09-19T13:41:47.091Z [info]: Account: "admin" found successfully
+2025-09-19T13:41:47.188Z [info]: Successfully logged in to Account: "admin"
+2025-09-19T13:43:09.153Z [info]: Listening on port 3000
+2025-09-19T13:52:56.488Z [info]: Listening on port 3000
+2025-09-19T13:53:25.946Z [info]: Incoming POST : /account/
+2025-09-19T13:53:25.949Z [info]: Fetching Account by username
+2025-09-19T13:53:26.237Z [info]: Registering Account
+2025-09-19T13:53:26.409Z [info]: Successfully registered Account: "huntersmith"
+2025-09-19T13:53:41.106Z [info]: Incoming POST : /account/
+2025-09-19T13:53:41.107Z [info]: Fetching Account by username
+2025-09-19T13:53:51.674Z [info]: Incoming POST : /account/
+2025-09-19T13:54:00.374Z [info]: Incoming POST : /account/login
+2025-09-19T13:54:00.375Z [info]: Logging in
+2025-09-19T13:54:00.408Z [info]: Account: "huntersmith" found successfully
+2025-09-19T13:54:00.549Z [info]: Successfully logged in to Account: "huntersmith"
+2025-09-19T13:54:16.960Z [info]: Incoming POST : /account/login
+2025-09-19T13:54:16.961Z [info]: Logging in
+2025-09-19T13:54:16.996Z [info]: Account: "admin" found successfully
+2025-09-19T13:54:17.160Z [info]: Successfully logged in to Account: "admin"
+2025-09-19T13:54:48.198Z [info]: Incoming POST : /account/login
+2025-09-19T13:54:48.199Z [info]: Logging in
+2025-09-19T13:54:48.229Z [warn]: Failed to find Account: "NotRealAccount"
+2025-09-19T13:55:05.368Z [info]: Incoming POST : /account/login
+2025-09-19T13:55:05.370Z [info]: Logging in
+2025-09-19T13:55:05.416Z [info]: Account: "admin" found successfully
+2025-09-19T13:55:05.600Z [warn]: Invalid password
+2025-09-19T13:55:23.330Z [info]: Incoming POST : /ticket/
+2025-09-19T13:55:23.350Z [info]: Authenticating Token
+2025-09-19T13:55:23.603Z [info]: Login Successfully Authenticated
+2025-09-19T13:55:23.605Z [info]: Adding ticket
+2025-09-19T13:55:23.816Z [info]: Ticket: "555e8b8e-064b-46e7-baf7-2b740bd3f989" by User: "huntersmith" added
+2025-09-19T13:55:56.535Z [info]: Incoming POST : /ticket/
+2025-09-19T13:55:56.536Z [info]: Authenticating Token
+2025-09-19T13:55:56.538Z [info]: Login Successfully Authenticated
+2025-09-19T13:56:09.612Z [info]: Incoming POST : /ticket/
+2025-09-19T13:56:09.612Z [info]: Authenticating Token
+2025-09-19T13:56:09.615Z [info]: Login Successfully Authenticated
+2025-09-19T13:56:38.064Z [info]: Incoming GET : /ticket/account/9cf279dd-3d19-4928-a89d-0d8ff6769bb9
+2025-09-19T13:56:38.065Z [info]: Authenticating Token
+2025-09-19T13:56:38.069Z [info]: Login Successfully Authenticated
+2025-09-19T13:56:38.072Z [info]: Getting Tickets by username
+2025-09-19T13:56:38.115Z [info]: 2 tickets found"
+2025-09-19T13:57:01.201Z [info]: Incoming GET : /ticket?status=Pending
+2025-09-19T13:57:01.202Z [info]: Authenticating Token
+2025-09-19T13:57:01.204Z [info]: Login Successfully Authenticated
+2025-09-19T13:57:01.204Z [info]: Getting Tickets by status
+2025-09-19T13:57:01.234Z [info]: 2 tickets found"
+2025-09-19T13:57:10.799Z [info]: Incoming GET : /ticket?status=Accepted
+2025-09-19T13:57:10.801Z [info]: Authenticating Token
+2025-09-19T13:57:10.806Z [info]: Login Successfully Authenticated
+2025-09-19T13:57:10.807Z [info]: Getting Tickets by status
+2025-09-19T13:57:10.844Z [info]: 0 tickets found"
+2025-09-19T13:57:25.423Z [info]: Incoming GET : /ticket?status=BadStatus
+2025-09-19T13:57:25.424Z [info]: Authenticating Token
+2025-09-19T13:57:25.431Z [info]: Login Successfully Authenticated
+2025-09-19T13:57:47.268Z [info]: Incoming PUT : /ticket/555e8b8e-064b-46e7-baf7-2b740bd3f989
+2025-09-19T13:57:47.269Z [info]: Authenticating Token
+2025-09-19T13:57:47.271Z [info]: Login Successfully Authenticated
+2025-09-19T13:57:47.272Z [info]: Getting Tickets by id
+2025-09-19T13:57:47.315Z [info]: Ticket: "555e8b8e-064b-46e7-baf7-2b740bd3f989" found
+2025-09-19T13:57:47.317Z [info]: Updating ticket
+2025-09-19T13:57:47.319Z [warn]: Invalid status
+2025-09-19T13:57:56.981Z [info]: Incoming PUT : /ticket/555e8b8e-064b-46e7-baf7-2b740bd3f989
+2025-09-19T13:57:56.982Z [info]: Authenticating Token
+2025-09-19T13:57:56.986Z [info]: Login Successfully Authenticated
+2025-09-19T13:57:56.986Z [info]: Getting Tickets by id
+2025-09-19T13:57:57.016Z [info]: Ticket: "555e8b8e-064b-46e7-baf7-2b740bd3f989" found
+2025-09-19T13:57:57.017Z [info]: Updating ticket
+2025-09-19T13:57:57.053Z [info]: Ticket: "555e8b8e-064b-46e7-baf7-2b740bd3f989" by User: "huntersmith" updated
+2025-09-19T13:58:04.654Z [info]: Incoming GET : /ticket?status=Accepted
+2025-09-19T13:58:04.655Z [info]: Authenticating Token
+2025-09-19T13:58:04.657Z [info]: Login Successfully Authenticated
+2025-09-19T13:58:04.657Z [info]: Getting Tickets by status
+2025-09-19T13:58:04.687Z [info]: 1 tickets found"
+2025-09-19T13:58:32.104Z [info]: Logging in
+2025-09-19T13:58:32.294Z [info]: Account: "username" found successfully
+2025-09-19T13:58:32.428Z [info]: Successfully logged in to Account: "username"
+2025-09-19T13:58:32.434Z [info]: Logging in
+2025-09-19T13:58:32.435Z [warn]: Failed to find Account: "username"
+2025-09-19T13:58:32.437Z [info]: Logging in
+2025-09-19T13:58:32.438Z [warn]: Failed to find Account: "invalid"
+2025-09-19T13:58:32.441Z [info]: Logging in
+2025-09-19T13:58:32.559Z [info]: Account: "username" found successfully
+2025-09-19T13:58:32.669Z [warn]: Invalid password
+2025-09-19T13:58:32.674Z [info]: Registering Account
+2025-09-19T13:58:32.784Z [info]: Successfully registered Account: "username"
+2025-09-19T13:58:32.786Z [info]: Registering Account
+2025-09-19T13:58:32.900Z [warn]: Failed to register Account "username"
+2025-09-19T13:58:32.903Z [info]: Adding ticket
+2025-09-19T13:58:32.903Z [info]: Ticket: "90d2da13-fe84-4252-a891-d75fe68ba7d1" by User: "username" added
+2025-09-19T13:58:32.906Z [info]: Adding ticket
+2025-09-19T13:58:32.907Z [warn]: Failed to add Ticket
+2025-09-19T13:58:32.909Z [info]: Updating ticket
+2025-09-19T13:58:32.910Z [info]: Ticket: "1" by User: "username" updated
+2025-09-19T13:58:32.913Z [info]: Updating ticket
+2025-09-19T13:58:32.914Z [warn]: Failed to update Ticket
+2025-09-19T13:58:32.916Z [info]: Updating ticket
+2025-09-19T13:58:32.917Z [warn]: Invalid status
+2025-09-19T13:58:32.919Z [info]: Getting Tickets by username
+2025-09-19T13:58:32.919Z [info]: 1 tickets found"
+2025-09-19T13:58:32.923Z [info]: Getting Tickets by username
+2025-09-19T13:58:32.923Z [warn]: Failed to fetch Tickets
+2025-09-19T13:58:32.926Z [info]: Getting Tickets by status
+2025-09-19T13:58:32.926Z [info]: 1 tickets found"
+2025-09-19T13:58:32.929Z [info]: Getting Tickets by status
+2025-09-19T13:58:32.930Z [warn]: Failed to fetch Tickets
+2025-09-19T14:00:34.796Z [info]: Listening on port 3000
+2025-09-19T14:00:37.051Z [info]: Incoming POST : /ticket/
+2025-09-19T14:00:37.052Z [info]: Authenticating Token
+2025-09-19T14:00:37.060Z [info]: Login Successfully Authenticated

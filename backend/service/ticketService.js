@@ -47,7 +47,7 @@ async function addTicket(username, ticket) {
         logger.warn("Failed to add Ticket");
         return {content: null, error: "Adding Ticket Failed"};
     }
-    logger.info(`Ticket: "${ticket.ticket_id}" by User: "${username}" added`);
+    logger.info(`Ticket: "${newTicket.ticket_id}" by User: "${username}" added`);
     return {content: dbTicket};
 }
 
